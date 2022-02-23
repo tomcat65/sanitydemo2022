@@ -5,18 +5,13 @@ import { Post } from '../../typings'
 import PortableText from 'react-portable-text'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { useState } from 'react'
-
+import {IFormInput} from '../../typings'
 interface Props {
   post: Post
 }
-interface IFormInput {
-  _id: string
-  name: string
-  email: string
-  comment: string
-}
+
 function Post({ post }: Props) {
-  const [submitted, setSubmitted] = useState(false)
+  const [submitted, setSubmitted] = useState<boolean>(false)
   console.log(post)
   const {
     register,

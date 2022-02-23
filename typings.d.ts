@@ -32,3 +32,9 @@ export interface Comment {
     _type:string;
     _updatedAt:string;
 }
+export interface IFormInput {
+  _id: string
+  name: string
+  email: string
+  comment: string
+}
